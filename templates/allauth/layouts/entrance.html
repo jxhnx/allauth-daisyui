@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load allauth %}
+
+{% block body %}
+  <div class="flex-grow flex flex-col justify-center">
+    <div class="flex-grow-0 flex-shrink-0 container mx-auto">
+      <div class="flex justify-center">
+        <div class="w-full lg:w-1/3">
+          {% if messages %}
+            {% for message in messages %}
+              {% element alert level=message.tags %}
+              {% slot message %}
+              {{ message }}
+            {% endslot %}
+          {% endelement %}
+        {% endfor %}
+      {% endif %}
+      <div class="shadow-lg bg-base-200 rounded-lg">
+        <div class="p-6">
+          {% block content %}
+          {% endblock content %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock body %}
