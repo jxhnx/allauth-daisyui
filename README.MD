@@ -6,15 +6,19 @@ Django Allauth templates with basic DaisyUI styling. You can find a list of avai
 
 1. Copy the contents of the templates directory into your templates folder.
 2. If not done already, register the templates in your settings.py, e.g., with:
-    ```
-    TEMPLATES = [
-    {
-        "DIRS": [
-            str(APPS_DIR / "templates"),
-        ],
-        "APP_DIRS": True,
-        ...
-        },
-    ]
-    ```
+   ```
+   TEMPLATES = [
+   {
+       "DIRS": [
+           str(APPS_DIR / "templates"),
+       ],
+       "APP_DIRS": True,
+       ...
+       },
+   ]
+   ```
 3. Make sure to adjust the entry template `base.html` in `templates/allauth/layouts/entrance.html` and `templates/allauth/layouts/manage.html`
+
+## Development
+
+This project uses `pre-commit`. Make sure to have it installed, e.g., in your python environment, to pass all checks.
